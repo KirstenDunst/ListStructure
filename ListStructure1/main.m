@@ -1,6 +1,6 @@
 //
 //  main.m
-//  ListStructure1
+//  ListStructure
 //
 //  Created by CSX on 2017/4/6.
 //  Copyright © 2017年 宗盛商业. All rights reserved.

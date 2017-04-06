@@ -152,6 +152,7 @@ void delete_all_double_link_node(DoubleList *pDlinkNode){
     
     pNode = pDlinkNode;
     pDlinkNode = pNode->next;
+    free(pNode);
     delete_all_double_link_node(pDlinkNode);
 }
 //在双向链表中查找数据
@@ -248,7 +249,7 @@ int count_number_in_double_link(const DoubleList *pDLinkNode){
 void print_double_link_node(const DoubleList *pDLinkNode){
     DoubleList *pNode = (DoubleList *)pDLinkNode;
     while (pNode != NULL) {
-        printf("%D\n",pNode->data);
+        printf("%d\n",pNode->data);
         pNode = pNode->next;
     }
     

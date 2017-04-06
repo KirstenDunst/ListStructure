@@ -29,7 +29,7 @@ void test (STU *head){
 
 void add_note(STU *head, STU *new){
     STU *data = malloc(sizeof(STU));
-    memcpy(data, new, sizeof(STU));
+    memcpy(data, new, sizeof(STU));   //memcpy(void *dest, const void *src, size_t n);用来将src地址处的内容拷贝n个字节的数据至目标地址dest指向的内存中去。函数返回指向dest的指针。    memcpy用来做内存拷贝，你可以拿它拷贝任何数据类型的对象，可以指定拷贝的数据长度；
     data->next = NULL;
     while (head->next != NULL) {
         head = head->next;
@@ -138,7 +138,7 @@ DoubleList *create_double_link_node(int value){
     DoubleList *pDLinkNode = NULL;
     pDLinkNode = malloc(sizeof(DoubleList));
     assert(pDLinkNode != NULL);//断言，不满足会报错原因，不继续执行
-    memset(pDLinkNode, 0, sizeof(DoubleList));
+    memset(pDLinkNode, 0, sizeof(DoubleList));      //memset(void *s,int c,size_t n) 作用：将已开辟内存空间 s 的首 n 个字节的值设为值 c（给空间初始化）；
     pDLinkNode->data = value;
     return pDLinkNode;
 }
@@ -272,12 +272,12 @@ int main(int argc, const char * argv[]) {
             printf("malloc");
             return -1;
         }
-        memset(head, 0, sizeof(*head));
+        memset(head, 0, sizeof(*head));   //memset(void *s,int c,size_t n) 作用：将已开辟内存空间 s 的首 n 个字节的值设为值 c（给空间初始化）；
         head->next = NULL;
         
         for (int i = 0; i<10; i++) {
             STU *stu1 = malloc(sizeof(STU));
-            strcpy(stu1->name, "Jack");
+            strcpy(stu1->name, "Jack");               //strcpy只能拷贝字符串，它遇到'\0'就结束拷贝；例：char a[100],b[50];strcpy(a,b);如用strcpy(b,a)，要注意a中的字符串长度（第一个‘\0’之前）是否超过50位，如超过，则会造成b的内存溢出。会造成缓冲区溢出，轻者程序崩溃，重者系统会出现问题！！
             stu1->name[strlen(stu1->name)] = '\0';
             stu1->age = arc4random()%100+17;
             stu1->avg = arc4random()%100+50;

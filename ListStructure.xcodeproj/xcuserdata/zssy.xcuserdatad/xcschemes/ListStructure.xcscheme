@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1F5D34C91E96134E001C22E4"
-               BuildableName = "ListStructure1"
-               BlueprintName = "ListStructure1"
-               ReferencedContainer = "container:ListStructure1.xcodeproj">
+               BuildableName = "ListStructure"
+               BlueprintName = "ListStructure"
+               ReferencedContainer = "container:ListStructure.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1F5D34C91E96134E001C22E4"
-            BuildableName = "ListStructure1"
-            BlueprintName = "ListStructure1"
-            ReferencedContainer = "container:ListStructure1.xcodeproj">
+            BuildableName = "ListStructure"
+            BlueprintName = "ListStructure"
+            ReferencedContainer = "container:ListStructure.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1F5D34C91E96134E001C22E4"
-            BuildableName = "ListStructure1"
-            BlueprintName = "ListStructure1"
-            ReferencedContainer = "container:ListStructure1.xcodeproj">
+            BuildableName = "ListStructure"
+            BlueprintName = "ListStructure"
+            ReferencedContainer = "container:ListStructure.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1F5D34C91E96134E001C22E4"
-            BuildableName = "ListStructure1"
-            BlueprintName = "ListStructure1"
-            ReferencedContainer = "container:ListStructure1.xcodeproj">
+            BuildableName = "ListStructure"
+            BlueprintName = "ListStructure"
+            ReferencedContainer = "container:ListStructure.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

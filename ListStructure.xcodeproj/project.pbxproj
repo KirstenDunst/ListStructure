@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F5D34CA1E96134E001C22E4 /* ListStructure1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ListStructure1; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5D34CA1E96134E001C22E4 /* ListStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ListStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5D34CD1E96134E001C22E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		1F5D34C11E96134E001C22E4 = {
 			isa = PBXGroup;
 			children = (
-				1F5D34CC1E96134E001C22E4 /* ListStructure1 */,
+				1F5D34CC1E96134E001C22E4 /* ListStructure */,
 				1F5D34CB1E96134E001C22E4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +49,26 @@
 		1F5D34CB1E96134E001C22E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1F5D34CA1E96134E001C22E4 /* ListStructure1 */,
+				1F5D34CA1E96134E001C22E4 /* ListStructure */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1F5D34CC1E96134E001C22E4 /* ListStructure1 */ = {
+		1F5D34CC1E96134E001C22E4 /* ListStructure */ = {
 			isa = PBXGroup;
 			children = (
 				1F5D34CD1E96134E001C22E4 /* main.m */,
 			);
+			name = ListStructure;
 			path = ListStructure1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1F5D34C91E96134E001C22E4 /* ListStructure1 */ = {
+		1F5D34C91E96134E001C22E4 /* ListStructure */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F5D34D11E96134E001C22E4 /* Build configuration list for PBXNativeTarget "ListStructure1" */;
+			buildConfigurationList = 1F5D34D11E96134E001C22E4 /* Build configuration list for PBXNativeTarget "ListStructure" */;
 			buildPhases = (
 				1F5D34C61E96134E001C22E4 /* Sources */,
 				1F5D34C71E96134E001C22E4 /* Frameworks */,
@@ -77,9 +78,9 @@
 			);
 			dependencies = (
 			);
-			name = ListStructure1;
+			name = ListStructure;
 			productName = ListStructure1;
-			productReference = 1F5D34CA1E96134E001C22E4 /* ListStructure1 */;
+			productReference = 1F5D34CA1E96134E001C22E4 /* ListStructure */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1F5D34C51E96134E001C22E4 /* Build configuration list for PBXProject "ListStructure1" */;
+			buildConfigurationList = 1F5D34C51E96134E001C22E4 /* Build configuration list for PBXProject "ListStructure" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -109,7 +110,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1F5D34C91E96134E001C22E4 /* ListStructure1 */,
+				1F5D34C91E96134E001C22E4 /* ListStructure */,
 			);
 		};
 /* End PBXProject section */
@@ -230,7 +231,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F5D34C51E96134E001C22E4 /* Build configuration list for PBXProject "ListStructure1" */ = {
+		1F5D34C51E96134E001C22E4 /* Build configuration list for PBXProject "ListStructure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F5D34CF1E96134E001C22E4 /* Debug */,
@@ -239,13 +240,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1F5D34D11E96134E001C22E4 /* Build configuration list for PBXNativeTarget "ListStructure1" */ = {
+		1F5D34D11E96134E001C22E4 /* Build configuration list for PBXNativeTarget "ListStructure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F5D34D21E96134E001C22E4 /* Debug */,
 				1F5D34D31E96134E001C22E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -118,7 +118,145 @@ STU *bubble(STU *head){
 }
 
 
-#pragma mark-----------------------------双向链表
+#pragma mark-----------------------------双向链表(非循环的双向链表操作)-------------开始---------
+/*
+ *双向链表相比较单向链表，主要有下面几个特点：
+ *（1）在数据结构中具有双向指针
+ *（2）插入数据的时候需要考虑前后的方向的操作
+ *（3）同样，删除数据的是有也需要考虑前后方向的操作
+ */
+
+
+typedef struct _Double_Link_Node DoubleList;
+struct _Double_Link_Node{
+    int data;
+    struct _Double_Link_Node *prev;
+    struct _Double_Link_Node *next;
+};
+//创建双向链表节点
+DoubleList *create_double_link_node(int value){
+    DoubleList *pDLinkNode = NULL;
+    pDLinkNode = malloc(sizeof(DoubleList));
+    assert(pDLinkNode != NULL);//断言，不满足会报错原因，不继续执行
+    memset(pDLinkNode, 0, sizeof(DoubleList));
+    pDLinkNode->data = value;
+    return pDLinkNode;
+}
+
+//删除双向链表
+void delete_all_double_link_node(DoubleList *pDlinkNode){
+    DoubleList *pNode;
+    if (pDlinkNode == NULL) {
+        return;
+    }
+    
+    pNode = pDlinkNode;
+    pDlinkNode = pNode->next;
+    delete_all_double_link_node(pDlinkNode);
+}
+//在双向链表中查找数据
+DoubleList *find_data_in_double_link(const DoubleList *pDLinkNode, int data){
+    DoubleList *pNode = NULL;
+    if (pDLinkNode == NULL) {
+        return NULL;
+    }
+    
+    pNode = (DoubleList *)pDLinkNode;
+    while (pNode != NULL) {
+        if (data == pNode->data) {
+            return pNode;
+        }
+         pNode = pNode->next;
+    }
+    return NULL;
+}
+
+//双向链表中插入数据
+BOOL insert_data_into_double_link(DoubleList *pNLinkNode, int data){
+    DoubleList *pNode;
+    DoubleList *pIndex;
+    
+    if (pNLinkNode == NULL) {
+        pNode = create_double_link_node(data);
+        assert(pNode != NULL);
+        pNLinkNode = pNode;
+        pNLinkNode->prev = pNLinkNode->next = NULL;
+        return TRUE;
+    }
+    
+    if (find_data_in_double_link(pNLinkNode, data) != NULL) {
+        return FALSE;
+    }
+    
+    pNode = create_double_link_node(data);
+    assert(pNode != NULL);
+    pIndex = pNLinkNode;
+    while (pIndex->next != NULL) {
+        pIndex = pIndex->next;
+    }
+    
+    pNode->prev = pIndex;
+    pNode->next = pIndex->next;
+    pIndex->next = pNode;
+    
+    return TRUE;
+}
+//双向链表中删除数据
+BOOL delect_data_from_double_link(DoubleList *pDLinkNode, int data){
+    DoubleList *pNode;
+    if (pDLinkNode == NULL) {
+        return FALSE;
+    }
+    
+    pNode = find_data_in_double_link(pDLinkNode, data);
+    if (pNode == NULL) {
+        return FALSE;
+    }
+    
+    if (pNode == pDLinkNode) {
+        if (pDLinkNode->next == NULL) {
+            pDLinkNode = NULL;
+        }else{
+            pDLinkNode = pNode->next;
+            pDLinkNode->prev = NULL;
+        }
+    }else{
+        if (pNode->next) {
+            pNode->next->prev = pNode->prev;
+            pNode->prev->next = pNode->next;
+        }
+    }
+    
+    free(pNode);
+    
+    return TRUE;
+}
+
+//统计双向链表中数据的个数
+int count_number_in_double_link(const DoubleList *pDLinkNode){
+    int count = 0;
+    DoubleList *pNode = (DoubleList *)pDLinkNode;
+    
+    while (pNode != NULL) {
+        count++;
+        pNode = pNode->next;
+    }
+    return count;
+}
+
+//打印双向链表中数据
+void print_double_link_node(const DoubleList *pDLinkNode){
+    DoubleList *pNode = (DoubleList *)pDLinkNode;
+    while (pNode != NULL) {
+        printf("%D\n",pNode->data);
+        pNode = pNode->next;
+    }
+    
+}
+#pragma mark-----------------------------------双向链表(非循环的双向链表操作)--------------结束------------
+
+
+
 
 
 

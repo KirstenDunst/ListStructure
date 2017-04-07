@@ -47,7 +47,7 @@ void dispaly_list(STU *head){
     }
 }
 
-//age的链表的冒泡排序核心算法
+//age的链表的冒泡排序（只调换指定元素部分的内容）
 //STU *bubble(STU *pNode){
 //    
 //    if (pNode == NULL) {
@@ -91,7 +91,7 @@ void dispaly_list(STU *head){
 //    return size;    //链表的实际长度
 //}
 
-
+//冒泡排序方法（调换整个单位进行排序）
 STU *bubble(STU *head){
     STU* tail = NULL;
     
@@ -137,7 +137,7 @@ struct _Double_Link_Node{
 DoubleList *create_double_link_node(int value){
     DoubleList *pDLinkNode = NULL;
     pDLinkNode = malloc(sizeof(DoubleList));
-    assert(pDLinkNode != NULL);//断言，不满足会报错原因，不继续执行
+    assert(pDLinkNode != NULL); //断言，不满足会报错原因，不继续执行
     memset(pDLinkNode, 0, sizeof(DoubleList));      //memset(void *s,int c,size_t n) 作用：将已开辟内存空间 s 的首 n 个字节的值设为值 c（给空间初始化）；
     pDLinkNode->data = value;
     return pDLinkNode;
@@ -254,7 +254,7 @@ void print_double_link_node(const DoubleList *pDLinkNode){
     }
     
 }
-#pragma mark-----------------------------------双向链表(非循环的双向链表操作)--------------结束------------
+#pragma mark-------------------------------双向链表(非循环的双向链表操作)--------------结束------------
 
 
 
